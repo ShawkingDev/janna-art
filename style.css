@@ -1,0 +1,312 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fff9f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === Splash Screen === */
+.splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff0f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.splash h1,
+.splash p {
+  opacity: 0;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Navigation Bar === */
+header {
+  background-color: #ffe4ec;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  color: #e91e63;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #e91e63;
+}
+
+/* === Brush Emoji === */
+.brush {
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+
+/* === Quotes === */
+.quotes {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-style: italic;
+  color: #aaa;
+  font-size: 1.1em;
+}
+
+/* === Featured Art Section === */
+.featured-art {
+  text-align: center;
+  padding: 20px;
+}
+
+.featured-art h2 {
+  font-size: 1.8em;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.featured-art img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+/* === Moodboard Slider === */
+.moodboard {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.moodboard h2 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: #e91e63;
+}
+
+.mood-slider {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 20px;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.mood-slider .slide {
+  background-color: #fff5f9;
+  padding: 15px 20px;
+  border-radius: 12px;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  color: #555;
+  font-size: 1em;
+}
+
+/* === About Section === */
+.about-section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: #e91e63;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#typewriter {
+  font-size: 1.1em;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+/* === Gallery Section === */
+/* === Gallery Page === */
+.gallery-section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2em;
+  color: #e91e63;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* === Lightbox === */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #fff5f9;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2.5em;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  gap: 50px;
+  font-size: 2.5em;
+  color: white;
+  cursor: pointer;
+}
+
+/* === Contact Section === */
+.contact-section {
+  text-align: center;
+  padding: 60px 30px;
+}
+
+.contact-section h2 {
+  color: #e91e63;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff5f9;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  text-align: center;
+  min-width: 200px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #e91e63;
+}
+
+.card a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #e91e63;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .quotes {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .contact-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
