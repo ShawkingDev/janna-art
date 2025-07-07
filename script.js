@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     img.src = featuredImages[randomIndex];
   }
 
-  const text = "Janna is a passionate artist who expresses her feelings through colors and creativity. Her work reflects peace, beauty, and love.";
+  const text = "Jana is a passionate artist who expresses her feelings through colors and creativity. Her work reflects peace, beauty, and love.";
   const output = document.getElementById("typewriter");
   if (output) {
     let i = 0;
